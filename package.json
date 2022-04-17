@@ -1,0 +1,24 @@
+{
+  "name": "strangerlinks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Kashif Raza",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "filesystem": "^1.0.1",
+    "http": "^0.0.1-security",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.3.0",
+    "node": "^17.7.2",
+    "pug": "^3.0.2",
+    "valid-url": "^1.0.9"
+  }
+}

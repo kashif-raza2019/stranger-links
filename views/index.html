@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/public/assets/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <!-- <link rel="stylesheet" href="/public/css/strangertext.css"> -->
+</head>
+<body>
+    <div class="header">
+        <!-- <div class="st">
+
+            <div class="st-top">
+              <div class="st-bound st-bound-full"></div>
+              <p><span class="st-drop st-stranger-s">S</span><span class="st-stranger-t">t</span><span class="st-stranger-r">r</span><span class="st-stranger-a">a</span><span class="st-stranger-n">n</span><span class="st-stranger-g">g</span><span class="st-stranger-e">e</span><span class="st-drop st-stranger-r-2">r</span>
+              </p>
+              <div class="st-bound st-bound-mini st-bound-left"></div>
+              <div class="st-bound st-bound-mini st-bound-right"></div>
+            </div>
+          
+            <div class="st-bottom">
+              <p><span class="st-things-t">T</span><span class="st-things-h">h</span><span class="st-things-i">i</span><span class="st-things-n">n</span><span class="st-things-g">g</span><span class="st-things-s">s</span></p>
+            </div>
+          
+          </div> -->
+          <p id="stBtn">Stranger Links</p>
+    </div>
+    <div class="form-container">
+        <div class="desc">
+            <p>
+                This is a simple web application that allows you to create a short link and share it with others.
+            </p>
+        </div>
+        <div class="main">
+            <form name="urlShortner" action="/link" method="post" onsubmit="return validate();">
+                <input type="text" name="longUrl" placeholder="Enter link here . . . " autocomplete="url" required>
+                <br>
+                <input type="submit" value="Shorten">
+            </form>
+        </div>
+
+    </div>
+    <script src="/public/js/index.js"></script>
+</body>
+</html>
