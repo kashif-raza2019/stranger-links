@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const DB_URI = "mongodb+srv://strangerlinks2704:WekR5vUishuIlCzw@strangerlinks.rq8by.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const DB_URI = "//NOT PERMITTED";
 
 mongoose.connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
