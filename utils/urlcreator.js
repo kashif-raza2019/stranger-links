@@ -10,7 +10,7 @@ const stList = ['Mike', 'Eleven', 'Will', 'Lucas', 'Dustin', 'Nancy', 'Johnathan
 // Random 4 digits number generator
 function randomDigits() {
     let digits = '';
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 3; i++) {
         digits += Math.floor(Math.random() * 10);
     }
     return digits;

@@ -1,0 +1,293 @@
+body, html{
+    margin: 10px;
+    height: 100%;
+}
+
+body{
+    background-color: rgb(31, 28, 28);
+    background-image: url('/public/assets/body_cover.jpg');
+    /* Full height */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: fit-content;
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        background-color: rgb(31, 28, 28);
+        background-image: url('/public/assets/body_cover.jpg');
+        background-size: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+    }
+
+    .container{
+        width: 100%;
+    }
+    .form-container{
+        padding-left: 2px;
+    }
+}
+    
+.footer{
+    position: absolute;
+    bottom: 0;
+    opacity: 0.85;
+    color: white;
+    text-align: center;
+    padding-top: 1%;
+}
+
+.footer button{
+    background-color: inherit;
+    border: 1px solid #a10a0a;
+    color: #a10a0a;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+
+.form-container{
+    padding-left: 10%;
+    margin: 20px;
+    font-family: sans-serif;
+    font-size: large;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    margin: 0px auto;
+    color: #000;
+    text-shadow:-1px 1px 0 rgb(182, 13, 13),
+                1px 1px 0 rgb(182, 13, 13),
+                1px -1px 0 rgb(182, 13, 13),
+                -1px -1px 0 rgb(182, 13, 13);
+    animation-name: glow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transition: ease-in-out;
+    font-size: 4.8rem;
+}
+
+@keyframes glow {
+    0%{
+        text-shadow: -1px 1px 0 rgb(182, 13, 13),
+                    1px 1px 0 rgb(182, 13, 13),
+                    1px -1px 0 rgb(182, 13, 13),
+                    -1px -1px 0 rgb(182, 13, 13);
+    }
+    25%{
+        text-shadow: -1px 1px 0 rgb(212, 85, 85),
+                    1px 1px 0 rgb(212, 85, 85),
+                    1px -1px 0 rgb(182, 13, 13),
+                    -1px -1px 0 rgb(212, 85, 85);
+    }
+    50%{
+        text-shadow: -1px 1px 0 rgb(182, 13, 13),
+                    1px 1px 0 rgb(212, 85, 85),
+                    1px -1px 0 rgb(212, 85, 85),
+                    -1px -1px 0 rgb(212, 85, 85);
+    }
+    75%{
+        text-shadow: -1px 1px 0 rgb(182, 13, 13),
+                    1px 1px 0 rgb(212, 85, 85),
+                    1px -1px 0 rgb(182, 13, 13),
+                    -1px -1px 0 rgb(182, 13, 13);
+    }
+    100%{
+        text-shadow: -1px 1px 0 rgb(182, 13, 13),
+                    1px 1px 0 rgb(182, 13, 13),
+                    1px -1px 0 rgb(182, 13, 13),
+                    -1px -1px 0 rgb(182, 13, 13);
+    }
+    
+}
+
+.desc{
+    color: #fff;
+    font-size: 1.6rem;
+    opacity: 0.85;
+}
+
+input[type=text]{
+    width: 400px;
+    font-size: medium;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    background-color: inherit;
+    color:rgb(212, 85, 85);
+    border: 1px solid rgb(182, 13, 13);
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input[type=submit]{
+    width: 400px;
+    font-size: larger;
+    background-color: inherit;
+    color: rgb(182, 13, 13);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 2px solid rgb(182, 13, 13);
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type=submit]:hover{
+    background-color: rgb(182, 13, 13);
+    color: #fff;
+    border: 2px solid #131524;
+    transition: .7s ease-in-out;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(75, 13, 173);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(75, 13, 173);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgb(75, 13, 173);
+  }
+
+  .link{
+      text-decoration: none;
+      color:rgb(75, 13, 173);
+      font-size: 1.6rem;
+      opacity: 0.95;
+      margin-left: 5px;
+      cursor: pointer;
+      animation: glow1 4.3s infinite;
+  }
+
+  @keyframes glow1 {
+      0%{opacity: 0.95;}
+      25%{opacity: 0.8; color: rgb(115, 121, 148);}
+      50%{opacity: 0.95; color: rgb(184, 22, 22);}
+      75%{opacity: 0.8; color: rgb(48, 10, 92);}
+    100%{opacity: 0.95; color: #7D334E;}
+  }
+
+    .link:hover{
+        color: rgb(186, 181, 194);
+        transition: .7s ease-in-out;
+    }
+
+  .copied{
+        color: rgb(90, 228, 152);
+        font-size: 1.6rem;
+        opacity: 0.95;
+  }
+
+  .det-text{
+      margin-left: 0px auto;
+      /* padding-left: 30px; */
+      width: 60%;
+      font-size: 1.6rem;
+      opacity: 0.95;
+      text-overflow: ellipsis;
+      color: #FA317D;
+  }
+
+  .det-text h4{
+      color :#1E7FA9;
+  }
+
+  a{
+        text-decoration: none;
+        color:rgba(14, 6, 7, 0.986);
+        font-size: 1.5rem;
+        opacity: 0.95;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* border text shadow */
+        text-shadow: -1px 1px 0 rgba(161, 11, 43, 0.986),
+                    1px 1px 0 rgba(161, 11, 43, 0.986),
+                    1px -1px 0 rgba(161, 11, 43, 0.986),
+                    -1px -1px 0 rgba(161, 11, 43, 0.986);
+  }
+
+  .main-highlight{
+      color: #80314E;
+  }
+
+@media  screen and (max-width: 600px) {
+    .header{
+        font-size: 3.2rem;
+    }
+    .desc{
+        font-size: 1.2rem;
+    }
+    .link{
+        font-size: 1.2rem;
+    }
+    .det-text{
+        font-size: 1.2rem;
+    }
+    .det-text h4{
+        font-size: 1.2rem;
+    }
+    a{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header{
+        font-size: 2.4rem;
+    }
+    .desc{
+        font-size: 1.2rem;
+    }
+    .link{
+        font-size: 1.2rem;
+    }
+    .det-text{
+        font-size: 1.2rem;
+    }
+    .det-text h4{
+        font-size: 1.2rem;
+    }
+    a{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .header{
+        font-size: 2.2rem;
+    }
+    .desc{
+        font-size: 1rem;
+    }
+    .link{
+        font-size: 1rem;
+    }
+    .det-text{
+        font-size: 1rem;
+    }
+    .det-text h4{
+        font-size: 1rem;
+    }
+    a{
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="/public/assets/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/public/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-cntr" id="fLogin">
+            <form action="/login" method="post" > 
+                <div class="form-group">
+                    <h2>Login</h2>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" class="form-control" placeholder="Enter email" autocomplete="off" required/>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Enter password" autocomplete="off" required/>
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="submit" value="Login" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+        <div class="form-cntr" id="fRegister">
+            <form action="/signup" method="post" >
+                <div class="form-group">
+                    <h2>Register</h2>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter email" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Enter password" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="register" value="Register" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+         <!-- Registration Form -->
+         <div class="form-group">
+            <button id="register">Register</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2022 Kashif Raza</p>
+    </footer>
+    <script src="/public/js/login.js"></script>
+</body>
+</html>

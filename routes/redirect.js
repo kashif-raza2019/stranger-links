@@ -1,29 +1,36 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
 
-const Url = require('../models/url');
+const URL = require('../models/url');
 
 router.get('/:code', async (req, res) => {
-    const {
-        code
-    } = req.params;
     try {
-        const url = await Url.findOne({
-            urlCode: code
-        }); 
+        const url = await URL.findOne({
+            urlCode: req.params.code
+        })
         if (url) {
-            url.clicks++;
-            url.save();
-            let lu = url.longUrl;
-            res.send(`<h5>Redirecting to: ${lu}</h5><script>window.location.href = "${lu}";</script>`);
-            // res.render('redirect', {
-            //     link: url.longUrl,
-            // });
+            let urlDate = url.date;
+            let currentDate = new Date();
+            let diff = currentDate - urlDate;
+            let diffDays = Math.floor(diff / (1000 * 3600 * 24));
+            console.log(urlDate + ' & ' + currentDate);
+            if (diffDays > 30) {
+                await url.remove();
+                res.sendFile(path.join(__dirname, '../views', 'expired.html'));
+            }else{
+                url.clicks++;
+                url.save();
+                console.log(url.longUrl);
+                res.redirect(url.longUrl);
+            }
         } else {
-            res.status(401).sendFile(path.join(__dirname, 'views', '401.html'));
+            console.log('No URL found');
+            res.status(401).sendFile(path.join(__dirname, '..', 'views', '401.html'));
         }
     } catch (err) {
-        res.json(err);
+        console.log('Error');
+        res.status(401).sendFile(path.join(__dirname, '..', 'views', '401.html'));
     }
 });
 

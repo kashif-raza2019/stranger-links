@@ -1,0 +1,131 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: #0a0404;
+    background-image: url('/public/assets/login_back.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-size: medium;
+    font-family: sans-serif;
+}
+
+.container{
+    margin: 40px auto;
+    width: 80%;
+    min-width: 400px;
+    height: auto;
+    padding: 3%;
+    /* background-image: linear-gradient(-45deg, #493DAB, #160f50, #160f50); */
+    background-blend-mode: lighten;
+}
+.form-group{
+    margin-bottom: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1.0;
+    align-items: center;
+}
+label{
+    font-size: 2rem;
+    font-stretch:ultra-expanded;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="password"]{
+    width: 30%;
+    min-width: 180px;
+    background-color: inherit;
+    color: crimson;
+    font-weight: 500;
+    font-size: 20px;
+    height: 34px;
+    text-align: center;
+    font-family: Verdana;
+    caret-color: crimson;
+    outline: none;
+    border: 1.1px solid rgb(172, 5, 5);
+}
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus{
+    border: 1.1px solid crimson;
+}
+input[type="submit"]{
+    width: 30%;
+    min-width: 180px;
+    min-height: 40px;
+    border: 1.1px solid crimson;
+    background-color: inherit;
+    color: crimson;
+    font-weight: 500;
+    font-size: 20px;
+    height: 34px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: crimson;
+    color: #fff;
+    transition: 0.6s ease-in;
+}
+
+button{
+    width: 30%;
+    min-width: 180px;
+    min-height: 40px;
+    border: 1.1px solid rgb(35, 8, 83);
+    background-color: inherit;
+    color: rgb(35, 8, 83);
+    font-weight: 500;
+    font-size: 20px;
+    height: 34px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(35, 8, 83);
+    color: #fff;
+    transition: 0.6s ease-in;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(199, 183, 183);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(199, 183, 183);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgb(199, 183, 183);
+  }
+#fRegister{
+    display: none;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    opacity: 0.8;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: crimson;
+    text-shadow: #64083e 0px 2px 5px;
+}

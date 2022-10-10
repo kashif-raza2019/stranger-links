@@ -1,0 +1,116 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: #0e0827;
+    background-image: url('/public/assets/mylinks_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+}
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  color: white;
+  text-align: center;
+  opacity: 0.85;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.footer button{
+  background-color: inherit;
+  border: 1px solid #a10a0a;
+  color: #a10a0a;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* Container with each internal block centered */
+.userLinkBox{
+  font-size: 1.4rem;
+  border: solid 1px #a10a0a;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px auto;
+  width: 80%;
+  color: #fff;
+  background: rgba(17, 7, 39, 0.7);
+  overflow-y: scroll;
+}
+
+.userLinkBox::-webkit-scrollbar {
+  width: 12px;
+}
+
+.userLinkBox::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(227, 45, 45, 0.3); 
+  border-radius: 10px;
+}
+
+.userLinkBox::-webkit-scrollbar-track:hover {
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 253, 253, 0.7); 
+  border-radius: 10px;
+}
+
+.userLinkBox::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(227, 45, 45, 0.3); 
+}
+
+.userLinkBox::-webkit-scrollbar-thumb:hover{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 253, 253, 0.7); 
+}
+
+.user-short{
+  color:rgb(142, 8, 59);
+  text-shadow: -1px 1px 0 rgb(133, 122, 155),
+               /* 1px 1px 0 rgb(137, 106, 202), */
+               /* 1px -1px 0 rgb(133, 122, 155), */
+               /* -1px -1px 0 rgb(137, 106, 202); */
+}
+
+.user-long{
+  color: lavender;
+}
+
+.user-clicks{
+  color: #64e66d;
+}
+
+.user-id{
+  color: #ea8e8e;
+}
+
+#success-delete{
+  color: #8eeaad;
+  display:  none;
+}
+#success-update{
+  color: #5794a1;
+  display:  none;
+}
+
+.btnDanger{
+  text-decoration: none;
+  color: #F72F2F;
+  border: 1px solid #F72F2F;
+  border-radius: 4px;
+  font-size: 2.1rem;
+  padding: 5px;
+  background-color: black;
+}
+.btnDanger:hover{
+  color: #F72F2F;
+  opacity: 0.8;
+}

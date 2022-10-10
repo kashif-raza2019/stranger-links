@@ -1,8 +1,9 @@
 doctype html
 head
   title Redirecting
-  script(type='text/javascript').
-    document.onload = function() {
-        window.location.href = '#{link}';
-    }
-p Redirecting
+body
+  p Google's Policy is redirecting you to #{link}
+  p Please Click on the link to redirect!
+  p
+    a(href=link) #{sl}
+  p Clicks : #{clicks}

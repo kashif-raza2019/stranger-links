@@ -11,9 +11,23 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: fit-content;
 }
-
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.85;
+    height: 10%;
+    color: white;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+a{
+    text-decoration: none;
+    color: white;
+    opacity: 0.76;
+}
 .form-container{
     padding-left: 10%;
     margin: 20px;
@@ -37,6 +51,28 @@ body{
     animation-iteration-count: infinite;
     transition: ease-in-out;
     font-size: 4.8rem;
+}
+.header p{
+    justify-content: space-between;
+}
+
+.login-btn{
+    background-color: inherit;
+    color: rgb(212, 4, 4);
+    padding: 0.5rem 1rem;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-left: 5rem;
+    margin-top: -5px;
+    border: 1px solid rgb(212, 4, 4);
+}
+
+.login-btn:hover{
+    background-color: rgb(212, 4, 4);
+    color: rgb(219, 205, 205);
+    transition: 0.7s ease-in-out;
 }
 
 @keyframes glow {
@@ -93,7 +129,7 @@ input[type=text]{
     outline: none;
 }
 
-input[type=submit]{
+input[type="submit"]{
     width: 400px;
     font-size: larger;
     background-color: inherit;
@@ -106,12 +142,54 @@ input[type=submit]{
     outline: none;
 }
 
-input[type=submit]:hover{
+input[type="submit"]:hover{
     background-color: rgb(182, 13, 13);
     color: #fff;
     border: 2px solid #131524;
     transition: .7s ease-in-out;
 }
+
+.mylinksBtn{
+    width: 400px;
+    font-size: larger;
+    background-color: inherit;
+    color: rgb(182, 13, 13);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 2px solid rgb(182, 13, 13);
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+
+}
+
+.mylinksBtn:hover{
+    background-color: rgb(182, 13, 13);
+    color: #fff;
+    border: 2px solid #131524;
+    transition: .7s ease-in-out;
+}
+
+input[type="button"]{
+    width: 400px;
+    font-size: larger;
+    background-color: inherit;
+    color: rgb(182, 13, 13);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 2px solid rgb(182, 13, 13);
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="button"]:hover{
+    background-color: rgb(182, 13, 13);
+    color: #fff;
+    border: 2px solid #131524;
+    transition: .7s ease-in-out;
+}
+
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgb(75, 13, 173);
@@ -133,3 +211,78 @@ input[type=submit]:hover{
       opacity: 0.95;
       cursor: pointer;
   }
+
+@media screen and (max-width: 600px){
+    .header{
+        font-size: 3.2rem;
+    }
+    .desc{
+        font-size: 1.2rem;
+    }
+    .login-btn{
+        font-size: 1rem;
+    }
+    .mylinksBtn{
+        font-size: 1rem;
+        width: 300px;
+    }
+    input[type=text]{
+        width: 300px;
+    }
+    input[type="submit"]{
+        width: 300px;
+    }
+    input[type="button"]{
+        width: 300px;
+    }   
+}
+
+@media screen and (max-width: 400px){
+    .header{
+        font-size: 2.4rem;
+    }
+    .desc{
+        font-size: 1rem;
+    }
+    .login-btn{
+        font-size: 0.8rem;
+    }
+    .mylinksBtn{
+        font-size: 0.8rem;
+        width: 200px;
+    }
+    input[type=text]{
+        width: 200px;
+    }
+    input[type="submit"]{
+        width: 200px;
+    }
+    input[type="button"]{
+        width: 200px;
+    }
+}
+
+@media  screen and (max-width: 320px){
+    .header{
+        font-size: 2.2rem;
+    }
+    .desc{
+        font-size: 0.8rem;
+    }
+    .login-btn{
+        font-size: 0.6rem;
+    }
+    .mylinksBtn{
+        font-size: 0.6rem;
+        width: 150px;
+    }
+    input[type=text]{
+        width: 150px;
+    }
+    input[type="submit"]{
+        width: 150px;
+    }
+    input[type="button"]{
+        width: 150px;
+    }
+}

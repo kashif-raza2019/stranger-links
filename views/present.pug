@@ -1,0 +1,30 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Already Present
+  link(rel='shortcut icon' href='/public/assets/favicon.jpg' type='image/x-icon')
+  link(rel='stylesheet' href='/public/css/presentpug.css')
+  // <link rel="stylesheet" href="/public/css/strangertext.css">
+
+body
+    .header
+        p#stBtn  Stranger Links
+    .det-text
+        h4 Click to Copy URL
+        .link.p #{url.shortUrl}
+        .copied
+    .det-text
+        h4 Long URL: 
+            - var long = url.longUrl
+            a(href=`${long}`, target="_blank") #{url.longUrl}
+        h4 Number of Clicks: 
+            .main-highlight #{url.clicks}
+        h4 Date Created: 
+            .main-highlight #{url.date}
+
+    .footer
+        p Copyright © 2022 Kashif Raza Github: kashifraza-2019 
+    
+    script(src='/public/js/index.js')

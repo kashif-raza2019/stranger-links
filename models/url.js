@@ -2,9 +2,10 @@ const { Timestamp } = require('bson');
 const mongoose = require('mongoose');
 
 const URLSchema = new mongoose.Schema({
-    urlId: String,
     longUrl: String,
     shortUrl: String,
+    urlCode: String,
+    userId: String,
     date: { type: Date, default: Date.now },
     clicks: { type: Number, default: 0 }    
 });

@@ -1,0 +1,26 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Link Already Present
+  link(rel='shortcut icon' href='/public/assets/favicon.jpg' type='image/x-icon')
+  link(rel='stylesheet' href='/public/css/presentpug.css')
+  // <link rel="stylesheet" href="/public/css/strangertext.css">
+
+body
+    .header
+        p#stBtn  Stranger Links
+    .det-text
+        h2 LINK ALREADY CREATED BY DIFFERENT USER
+    .link.p #{url.shortUrl}
+    .copied
+    .det-text
+        h4 Date Created: 
+            .main-highlight #{url.date}
+
+    .footer
+        button(onclick="location.href='/'") Go Back
+        p Copyright © 2022 Kashif Raza Github: kashifraza-2019 
+    
+    script(src='/public/js/index.js')

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stranger Links</title>
     <link rel="shortcut icon" href="/public/assets/favicon.jpg" type="image/x-icon">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="/public/css/index.css">
     <!-- <link rel="stylesheet" href="/public/css/strangertext.css"> -->
 </head>
@@ -27,21 +28,26 @@
           
           </div> -->
           <p id="stBtn">Stranger Links</p>
+          <!-- <p><button class="login-btn" onclick="location.href='/login'">Login</button></p> -->
     </div>
     <div class="form-container">
         <div class="desc">
             <p>
-                This is a simple web application that allows you to create a short link and share it with others.
+                URL Shortener themed with my one of the favourite webseries, Stranger Things.
             </p>
+            <button type="button" class="mylinksBtn" onclick="location.href='/mylinks'">My Links</button>
         </div>
         <div class="main">
-            <form name="urlShortner" action="/link" method="post" onsubmit="return validate();">
-                <input type="text" name="longUrl" placeholder="Enter link here . . . " autocomplete="url" required>
+            <form name="urlShortner"  action="/link" method="post" onsubmit="return validate()">
+                <input type="text" id="url" name="longUrl" placeholder="Enter link here . . . " autocomplete="url" required>
                 <br>
-                <input type="submit" value="Shorten">
+                <input type="submit" id="shortnerBtn" value="Shorten">
             </form>
+            <button type="button" class="mylinksBtn" onclick="location.href='/intro'">Play My Intro</button>
         </div>
-
+    </div>
+    <div class="footer">
+        Copyright © 2022 Kashif Raza<a href="https://github.com/kashif-raza2019/stranger-links" target="_blank" rel="noopener noreferrer"> | Github </a>
     </div>
     <script src="/public/js/index.js"></script>
 </body>

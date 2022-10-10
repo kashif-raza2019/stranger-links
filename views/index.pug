@@ -11,7 +11,12 @@ head
 body
     .header
         p#stBtn  Stranger Links
-
-    .link.p #{link}
+    .det-text 
+        h4 Click to Copy URL
+    .link.p(style="cursor: pointer;") #{link}
     .copied
+    .footer
+        button(onclick="location.href='/'") Go Back
+        button(onclick="location.href='/mylinks'") My Links
+        p Copyright © 2022 Kashif Raza Github: kashifraza-2019 
     script(src='/public/js/index.js')

@@ -1,3 +1,4 @@
+import swal from 'sweetalert';
 var stBtn = document.getElementById('stBtn');
 var audioFlag = true;
 var audio = new Audio('/public/assets/sttheme.mp3');
@@ -10,15 +11,6 @@ stBtn.onclick = function() {
         audioFlag = true;
     }
 }
-
-let link = document.querySelector(".link");
-link.onclick = function(){
-    // Program to Copy Text to Clipboard
-    var linkText = document.querySelector(".link");
-    var text = linkText.innerHTML;
-    copyToClipboard(text);
-}
-
 let copied = document.querySelector(".copied");
 
 const copyToClipboard = str => {
@@ -27,27 +19,31 @@ const copyToClipboard = str => {
       return navigator.clipboard.writeText(str);}
     return Promise.reject('The Clipboard API is not available.');
   };
-
+// const shortnerBtn = document.querySelector("#shortnerBtn");
+// const form1 = document.querySelector("#f1");
 function validate(){
-    var x = document.forms["urlShortner"]["url"].value;
-    if(!validURL(x)){
-        alert('Please enter a valid URL');
-        return false;
-    }else{
+    let val = document.querySelector("#url").value;
+    if(isValidUrl(val)){
         return true;
     }
+    // swal("Oops!", "Link isn't valid !", "danger");
+    return false;
 }
 
 // Password: WekR5vUishuIlCzw
 // Username: strangerlinks2704
 
 // Regex for URL
-function validURL(str) {
-    var pattern = new RegExp('^(https:\\/\\/)?'+ // protocol
-      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
-      '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-      '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-      '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-    return !!pattern.test(str);
+function isValidUrl(_string){
+    const matchPattern = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
+    return matchPattern.test(_string);
   }
+
+  let link = document.querySelector(".link");
+  link.onclick = function(){
+      // Program to Copy Text to Clipboard
+      var linkText = document.querySelector(".link");
+      var text = linkText.innerHTML;
+      copyToClipboard(text);
+  }
+  
